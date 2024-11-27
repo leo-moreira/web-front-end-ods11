@@ -1,0 +1,52 @@
+body {
+  margin: none;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+  padding: 0 2em;
+}
+
+header > .site-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  font-size: 24px;
+}
+
+header > nav {
+  display: flex;
+}
+
+.site-logo > .logo {
+  font-size: 42px;
+}
+
+main {
+    background-image: url(../images/hero.jpg);
+    height: 70vh;
+    background-size: cover;
+}
+
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.banner-text {
+    margin-left: 2em;
+    font-size: larger;
+    color: white;
+    max-width: 50vw;
+}
