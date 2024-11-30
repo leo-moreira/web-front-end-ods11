@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/index.css">
-        <link
-        href="https://fonts.googleapis.com/css2?family=Material+Icons"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="styles/index.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet"
-      />
-    </head>
-    <body class="login">
-        <header>
-            <span class="site-logo">
-              SITE OS11
-              <span class="material-symbols-outlined logo"> eco </span>
-            </span>
-      
-          </header>
-      
-          <section>
-            <form action="../index.html">
-                <label for="email">Email</label>
-                <input id="email" type="email" required>
-                <label for="senha">Senha</label>
-                <input id="senha" type="password" required>
-                <input type="submit" value="Login">
-            </form>
-          </main>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EcoCidades - Login</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="login">
+  <header>
+    <span class="site-logo">
+      <span class="material-symbols-outlined logo"> eco </span>
+      <span>EcoCidades</span>
+    </span>
+
+    <nav>
+      <a href="../index.html" class="link-home">PÁGINA PRINCIPAL</a>
+      <a href="cadastro.html" class="link-cadastro">CADASTRO</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="section-form login">
+      <form action="login.html" class="form-cadastro">
+        <span>
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+        </span>
+        <span>
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" required>
+        </span>
+        <input type="submit" value="Login">
+      </form>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <span class="footer-left">
+        <h4>Quem sou</h4>
+        <a href="">Leonardo Moreira Domingues - Currículo</a>
+      </span>
+      <span class="footer-right">
+        <p>UTFPR - Universidade Tecnológica Federal do Paraná</p>
+        <p>Desenvolvimento Web Frontend</p>
+        <p>2024</p>
+      </span>
+    </div>
+  </footer>
+</body>
+
 </html>

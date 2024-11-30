@@ -4,6 +4,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  background-color: rgba(0, 255, 0, 0.05);
 }
 header {
   display: flex;
@@ -19,14 +20,23 @@ header > .site-logo {
   justify-content: space-between;
   width: 10rem;
   font-size: 24px;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 header > nav {
   display: flex;
 }
 
+nav > a {
+  text-decoration: none;
+  margin-left: 1em;
+}
+
 .site-logo > .logo {
   font-size: 42px;
+  color: green;
 }
 
 main {
@@ -84,17 +94,25 @@ main {
   border: 1px solid black;
   padding: 1em;
   border-radius: 12px;
+  background-color: white;
+}
+
+h2{
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .card-icon {
   font-size: 60px;
+  color: green;
 }
 
 footer {
   padding: 1em;
   margin-top: 2em;
   height: 12vh;
-  background-color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.01);
 }
 
 footer > .footer-links {
@@ -122,21 +140,34 @@ footer > .footer-links {
 .form-cadastro > span {
   display: flex;
   flex-direction: column;
-  margin: .2em;
+  margin: 0.2em;
 }
 
 .form-cadastro > input {
   display: flex;
   flex-direction: column;
-  margin: 1em .2em;
+  margin: 1em 0.2em;
 }
 
-.section-cadastro {
+.section-form {
   width: 100vw;
-  height: 28vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.cadastro {
+  height: 32vh;
+}
+
+label {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.login {
+  height: 24vh;
 }
 
 .container {
