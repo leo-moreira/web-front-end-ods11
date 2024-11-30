@@ -30,23 +30,119 @@ header > nav {
 }
 
 main {
-    background-image: url(../images/hero.jpg);
-    height: 70vh;
-    background-size: cover;
+  background-image: url(../images/hero.jpg);
+  height: 70vh;
+  background-size: cover;
 }
 
 .hero-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .banner-text {
-    margin-left: 2em;
-    font-size: larger;
-    color: white;
-    max-width: 50vw;
+  margin-left: 2em;
+  font-size: larger;
+  color: white;
+  max-width: 50vw;
+}
+
+.figure-trabalho > img {
+  width: 80vw;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apresentacao {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+.apresentacao > h2 {
+  text-align: center;
+  margin: 2em;
+  padding: 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  margin: 1em;
+  text-align: center;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 12px;
+}
+
+.card-icon {
+  font-size: 60px;
+}
+
+footer {
+  padding: 1em;
+  margin-top: 2em;
+  height: 12vh;
+  background-color: gainsboro;
+}
+
+footer > .footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-right {
+  text-align: end;
+}
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid gray;
+  padding: 1em;
+  width: 30vw;
+  background-color: white;
+}
+
+.form-cadastro > span {
+  display: flex;
+  flex-direction: column;
+  margin: .2em;
+}
+
+.form-cadastro > input {
+  display: flex;
+  flex-direction: column;
+  margin: 1em .2em;
+}
+
+.section-cadastro {
+  width: 100vw;
+  height: 28vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../images/hero.jpg");
 }
