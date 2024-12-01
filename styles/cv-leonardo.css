@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: antiquewhite;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header > h1 {
+  color: blue;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista-contato {
+  align-self: flex-start;
+}
+
+.lista-contato > li {
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.lista-contato > li > span {
+  margin-right: 0.3em;
+}
+
+dt {
+    text-decoration: underline;
+}
+
+.material-symbols-outlined {
+  color: blue;
+}
+
+#resumo,
+#ods,
+#habilidades,
+#educacao,
+#hobbies,
+#links {
+  border-bottom: 1px solid;
+}
+
+.figcaption-perfil,
+.figcaption-ods {
+  margin-top: 0.5em;
+}
+
+.figcaption-ods {
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
