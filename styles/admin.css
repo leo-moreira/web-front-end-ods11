@@ -31,8 +31,7 @@ li {
     align-items: center;
     border: 2px solid gray;
     padding: 1em;
-    width: max-content;
-    min-width: 40vw;
+    min-width: 35vw;
     background-color: white;
 }
 
