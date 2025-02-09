@@ -4,6 +4,7 @@
 
 .pesquisa > input {
     margin: 0.5em;
+    height: 2em;
 }
 
 .container {
@@ -30,8 +31,12 @@ li {
     align-items: center;
     border: 2px solid gray;
     padding: 1em;
-    width: 30vw;
+    width: max-content;
     background-color: white;
+}
+
+.excluir-usuario {
+    margin-left: 1em;
 }
 
 .form-cadastro > span {
@@ -43,5 +48,6 @@ li {
 }
 
 .form-buttons > button {
-    margin: 0.5em;
+    height: 2em;
+    margin: 0.5em 0;
 }
