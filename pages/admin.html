@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EcoCidades - Admin</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/index.css" />
+  <link rel="stylesheet" href="../styles/admin.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <span class="site-logo">
+      <span class="material-symbols-outlined logo"> eco </span>
+      <span>EcoCidades</span>
+    </span>
+
+    <nav>
+      <a href="../index.html" class="link-home">PÁGINA PRINCIPAL</a>
+      <a href="login.html" class="link-cadastro">LOGIN</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="section-form">
+      <form action="login.html" class="form-cadastro">
+        <span>
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" required>
+        </span>
+        <span>
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+        </span>
+        <span class="form-buttons">
+          <button onclick="cadastrarUsuario()" type="button">Cadastrar Usuário</button>
+          <button type="button" onclick="limparCampos()">Limpar Campos</button>
+        </span>
+        <span>
+          <input type="text" id="pesquisa" placeholder="Pesquisar..." oninput="pesquisarUsuarios()">
+        </span>
+        <ul id="listaUsuarios"></ul>
+        <span class="form-buttons">
+          <button onclick="excluirTodos()" type="button">Excluir Todos</button>
+        </span>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <div class="footer-left">
+        <h4>Quem sou</h4>
+        <a href="https://leo-moreira.github.io/cv-web-frontend/">Leonardo Moreira Domingues - Currículo</a>
+      </div>
+      <div class="footer-right">
+        <p>UTFPR - Universidade Tecnológica Federal do Paraná</p>
+        <p>Desenvolvimento Web Frontend</p>
+        <p>2024</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", carregarUsuarios);
+
+  function cadastrarUsuario() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      if (nome && email) {
+          const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+          const novoUsuario = { nome, email, data: new Date().toLocaleString() };
+          usuarios.push(novoUsuario);
+          localStorage.setItem("usuarios", JSON.stringify(usuarios));
+          carregarUsuarios();
+          limparCampos();
+      } else {
+          alert("Preencha todos os campos!");
+      }
+  }
+
+  function carregarUsuarios() {
+      const lista = document.getElementById("listaUsuarios");
+      lista.innerHTML = "";
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      usuarios.forEach((usuario, index) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${usuario.data} - ${usuario.nome} (${usuario.email}) 
+          <button onclick="excluirUsuario(${index})">Excluir</button>`;
+          lista.appendChild(li);
+      });
+  }
+
+  function excluirUsuario(index) {
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      usuarios.splice(index, 1);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      carregarUsuarios();
+  }
+
+  function excluirTodos() {
+      if (confirm("Tem certeza que deseja excluir todos os usuários?")) {
+          localStorage.removeItem("usuarios");
+          carregarUsuarios();
+      }
+  }
+
+  function limparCampos() {
+      document.getElementById("nome").value = "";
+      document.getElementById("email").value = "";
+  }
+
+  function pesquisarUsuarios() {
+      const filtro = document.getElementById("pesquisa").value.toLowerCase();
+      const lista = document.getElementById("listaUsuarios");
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      lista.innerHTML = "";
+      usuarios.filter(usuario => 
+          usuario.nome.toLowerCase().includes(filtro) || 
+          usuario.email.toLowerCase().includes(filtro))
+          .forEach((usuario, index) => {
+              const li = document.createElement("li");
+              li.innerHTML = `${usuario.nome} (${usuario.email}) - ${usuario.data} 
+              <button onclick="excluirUsuario(${index})">Excluir</button>`;
+              lista.appendChild(li);
+          });
+  }
+</script>
+</html>

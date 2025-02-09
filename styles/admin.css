@@ -1,0 +1,47 @@
+.pesquisa {
+    width: 90%;
+}
+
+.pesquisa > input {
+    margin: 0.5em;
+}
+
+.container {
+    padding: 10em 0;
+    max-height: max-content;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+    padding: 1em;
+    width: 30vw;
+    background-color: white;
+}
+
+.form-cadastro > span {
+    width: 100%;
+}
+
+.form-buttons {
+    width: 90%;
+}
+
+.form-buttons > button {
+    margin: 0.5em;
+}
