@@ -32,6 +32,7 @@ li {
     border: 2px solid gray;
     padding: 1em;
     width: max-content;
+    min-width: 30vw;
     background-color: white;
 }
 
