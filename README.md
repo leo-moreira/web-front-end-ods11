@@ -36,6 +36,7 @@ O site foi desenvolvido utilizando as seguintes tecnologias e recursos:
 - 📁 styles (Arquivos de estilo CSS)
 - 📁 images (Imagens do projeto)
 - 📁 pages (Páginas do projeto)
+- 📁 scripts (Scripts JavaScript do projeto - Adicionados no Projeto 2)
 - 📄 index.html (Página principal do projeto)
 - 📄 LICENSE
 - 📄 README.md
@@ -46,3 +47,4 @@ O site foi desenvolvido utilizando as seguintes tecnologias e recursos:
 - Login
 - Cadastro
 - CV
+- Admin (Adicionado no Projeto 2)
